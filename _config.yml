@@ -1,0 +1,28 @@
+# Site
+title: Some
+subtitle: Lab Spaces
+
+# URL
+url: http://alab.space
+baseurl: /
+permalink: :title/
+include: ['_pages']
+
+# Build settings
+markdown: kramdown
+port: 4444
+
+# Defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      cover: "/assets/cover/cover.jpg"
+
+# Data
+social:
+  facebook_url: "https://www.facebook.com/thiago.hersan"
+  twitter_url: "https://www.twitter.com/thiagohersan"
+  twitter_user: "@thiagohersan"

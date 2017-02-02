@@ -1,0 +1,96 @@
+@import 'constants';
+
+$family-sans: 'Raleway', 'Arial';
+$family-mono: 'Source Code Pro', 'Courier New';
+
+$menu-title-size: 1.4em;
+$menu-link-desktop: 0.8em;
+$menu-link-mobile: 1em;
+
+$text-size: 1.1rem;
+$detail-size: 1.1rem;
+
+@mixin fonts {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    font-size: 14px;
+    @include media-query(THREE) { 
+      font-size: 16px;
+    }
+  }
+
+  body {
+    font: normal $text-size $family-sans;
+    color: $TEXT-COLOR;
+  }
+
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.17rem; }
+  h4 { font-size: 1.12rem; }
+  h5 { font-size: .83rem; }
+  h6 { font-size: .75rem; }
+
+  p {
+    font: normal $text-size $family-sans;
+    word-spacing: 4px;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  s {
+    text-decoration:line-through;
+  }
+
+  a {
+    font: bold $detail-size $family-sans;
+    font-weight: 900;
+    text-decoration: none;
+    color: $LINK-COLOR;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: color $TRANSITION-PERIOD linear;
+
+    &:visited {
+      color: $LINK-COLOR-VISITED;
+    }
+
+    &:hover {
+      color: $LINK-COLOR-HOVER;
+    }
+  }
+
+  #navbar {
+    a {
+      font-size: $menu-link-mobile;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: $MENU-COLOR;
+
+      &:visited {
+        color: $MENU-COLOR;
+      }
+
+      &:hover {
+        color: $MENU-HOVER-COLOR;
+      }
+
+      @include media-query(THREE) {
+        font-size: $menu-link-desktop;
+      }
+    }
+
+    #nav-home {
+      font-size: $menu-title-size;
+    }
+
+  }
+}
