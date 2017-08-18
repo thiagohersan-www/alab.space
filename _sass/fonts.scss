@@ -1,96 +1,47 @@
-@import 'constants';
+$BACKGROUND: #999;
 
-$family-sans: 'Raleway', 'Arial';
-$family-mono: 'Source Code Pro', 'Courier New';
+$MENU-BACKGROUND-COLOR: #222;
+$MENU-ITEM-COLOR: #fff;
+$MENU-ITEM-HOVER-COLOR: darken($MENU-ITEM-COLOR, 40%);
 
-$menu-title-size: 1.4em;
-$menu-link-desktop: 0.8em;
-$menu-link-mobile: 1em;
+$FAMILY-SANS: 'Raleway', 'Arial';
 
-$text-size: 1.1rem;
-$detail-size: 1.1rem;
+$MENU-TITLE-SIZE: 1.4rem;
+$MENU-LINK-SIZE: 1rem;
 
-@mixin fonts {
-  html {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+$MENU-SPACING: 20px;
 
-    font-size: 14px;
-    @include media-query(THREE) { 
-      font-size: 16px;
-    }
+$TRANSITION-PERIOD: 0.2s;
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-size: 14px;
+  @media only screen and (min-width: 900px) {
+    font-size: 16px;
   }
+}
 
-  body {
-    font: normal $text-size $family-sans;
-    color: $TEXT-COLOR;
-  }
-
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.5rem; }
-  h3 { font-size: 1.17rem; }
-  h4 { font-size: 1.12rem; }
-  h5 { font-size: .83rem; }
-  h6 { font-size: .75rem; }
-
-  p {
-    font: normal $text-size $family-sans;
-    word-spacing: 4px;
-  }
-
-  strong {
-    font-weight: bold;
-  }
-
-  em {
-    font-style: italic;
-  }
-
-  s {
-    text-decoration:line-through;
-  }
-
-  a {
-    font: bold $detail-size $family-sans;
-    font-weight: 900;
+.navbar {
+  .navbar-item {
+    font: 700 $MENU-LINK-SIZE $FAMILY-SANS;
     text-decoration: none;
-    color: $LINK-COLOR;
-    cursor: pointer;
     text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $MENU-ITEM-COLOR;
     transition: color $TRANSITION-PERIOD linear;
 
     &:visited {
-      color: $LINK-COLOR-VISITED;
+      color: $MENU-ITEM-COLOR;
     }
 
     &:hover {
-      color: $LINK-COLOR-HOVER;
+      color: $MENU-ITEM-HOVER-COLOR;
     }
   }
 
-  #navbar {
-    a {
-      font-size: $menu-link-mobile;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      color: $MENU-COLOR;
-
-      &:visited {
-        color: $MENU-COLOR;
-      }
-
-      &:hover {
-        color: $MENU-HOVER-COLOR;
-      }
-
-      @include media-query(THREE) {
-        font-size: $menu-link-desktop;
-      }
-    }
-
-    #nav-home {
-      font-size: $menu-title-size;
-    }
-
+  .navbar-title {
+    font-size: $MENU-TITLE-SIZE;
   }
 }
