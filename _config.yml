@@ -4,7 +4,7 @@ subtitle: Lab Spaces
 
 # URL
 url: http://alab.space
-baseurl: /
+baseurl: ''
 permalink: :title/
 include: ['_pages']
 
