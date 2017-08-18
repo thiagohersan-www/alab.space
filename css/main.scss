@@ -3,15 +3,20 @@
 
 @import 'fonts';
 
+$BACKGROUND-COLOR: #444;
+$MENU-BACKGROUND-COLOR: linear-gradient(to bottom right, #a9b7c0, #c7d8c6, #efd9c1);
+$MENU-SPACING: 20px;
+
 body {
   display: block;
+  min-height: 100vh;
   margin: 0;
-  background: $BACKGROUND;
+  background: $BACKGROUND-COLOR;
 }
 
 .navbar {
   padding: $MENU-SPACING;
-  background-color: $MENU-BACKGROUND-COLOR;
+  background: $MENU-BACKGROUND-COLOR;
 
   .navbar-container + .navbar-container {
     margin-top: $MENU-SPACING;

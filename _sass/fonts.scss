@@ -1,26 +1,17 @@
-$BACKGROUND: #999;
-
-$MENU-BACKGROUND-COLOR: #222;
-$MENU-ITEM-COLOR: #fff;
-$MENU-ITEM-HOVER-COLOR: darken($MENU-ITEM-COLOR, 40%);
+$MENU-ITEM-COLOR: #444;
+$MENU-ITEM-HOVER-COLOR: #fff;
 
 $FAMILY-SANS: 'Raleway', 'Arial';
 
 $MENU-TITLE-SIZE: 1.4rem;
 $MENU-LINK-SIZE: 1rem;
 
-$MENU-SPACING: 20px;
-
-$TRANSITION-PERIOD: 0.2s;
+$TRANSITION-PERIOD: 0.15s;
 
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  font-size: 14px;
-  @media only screen and (min-width: 900px) {
-    font-size: 16px;
-  }
+  font-size: 18px;
 }
 
 .navbar {

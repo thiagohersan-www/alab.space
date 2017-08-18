@@ -1,6 +1,6 @@
 # Site
-title:
-subtitle: Lab Spaces
+title: Lab Spaces
+cover: "/assets/cover/cover.jpg"
 
 # URL
 url: http://alab.space
@@ -11,15 +11,6 @@ include: ['_pages']
 # Build settings
 markdown: kramdown
 port: 4444
-
-# Defaults
-defaults:
-  -
-    scope:
-      path: ""
-      type: "pages"
-    values:
-      cover: "/assets/cover/cover.jpg"
 
 # Data
 social:
